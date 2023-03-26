@@ -1,4 +1,14 @@
-# Phaser 3 + TypeScript + Vite.js Template
+# SideScrolling Platformer 
+
+This repo follows the Tilemaps tutorial [here](https://www.youtube.com/watch?v=5ICZ60bwfmg&list=PLNwtXgWIx3rg3J4XyuDVhjU81dZbJtVAU&index=1)
+
+
+
+
+## Getting Started
+
+This uses the Phaser3+Vite+TypeScript template to setup
+
 > Make Phaser 3 games with TypeScript and modern frontend tooling.
 
 ![License](https://img.shields.io/badge/license-MIT-green)
