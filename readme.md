@@ -3,6 +3,11 @@
 This repo follows the Tilemaps tutorial [here](https://www.youtube.com/watch?v=5ICZ60bwfmg&list=PLNwtXgWIx3rg3J4XyuDVhjU81dZbJtVAU&index=1)
 
 
+## About
+
+- Uses [gameartguppy](https://www.gameartguppy.com/) and [kenney](https://www.kenney.nl/assets) assets
+
+
 
 
 ## Getting Started
