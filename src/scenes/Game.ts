@@ -6,23 +6,16 @@ export default class Game extends Phaser.Scene {
   }
 
   preload() {
-    const koalaTexture = [
-      "assets/koala/koala_idle.png",
-      "assets/koala/koala_jump.png",
-      "assets/koala/koala_walk01.png",
-      "assets/koala/koala_walk02.png",
-      "assets/koala/koala_walk03.png",
-    ];
-
-    for (let i = 0; i < koalaTexture.length; i++) {
-      this.load.image(`koala${i}`, koalaTexture[i]);
-    }
+    this.load.atlas('koala', 'assets/koala.png', 'assets/koala.json')
 
     this.load.image("tiles", "assets/sheet.png");
     this.load.tilemapTiledJSON("tilemap", "assets/ground.json");
   }
 
   create() {
+
+    this.createPlayerAnimations()
+
     // // width and height of the game
     const { width, height } = this.scale;
 
@@ -39,11 +32,27 @@ export default class Game extends Phaser.Scene {
   */
     ground.setCollisionByProperty({ collides: true });
     console.log(ground);
+    // makes the ground tiles to be static matter components
     this.matter.world.convertTilemapLayer(ground);
 
-    this.matter.add.sprite(width * 0.5, height * 0.5, "koala1");
+    this.matter.add.sprite(width * 0.5, height * 0.5, "koala").play('player-walk');
 
     this.cameras.main.scrollY = 200;
     this.cameras.main.scrollX = 200;
+  }
+
+
+  private createPlayerAnimations() {
+    this.anims.create({
+      key: 'player-walk',
+      frameRate: 10,
+      frames: this.anims.generateFrameNames('koala', {
+        start: 1,
+        end: 3,
+        prefix: 'koala_walk0',
+        suffix: '.png'
+      }),
+      repeat: -1
+    })
   }
 }

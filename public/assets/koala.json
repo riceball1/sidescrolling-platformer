@@ -1,0 +1,52 @@
+{"frames": {
+
+"koala_idle.png":
+{
+	"frame": {"x":216,"y":1,"w":67,"h":100},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":1,"w":67,"h":100},
+	"sourceSize": {"w":72,"h":102}
+},
+"koala_jump.png":
+{
+	"frame": {"x":1,"y":1,"w":71,"h":100},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":2,"w":71,"h":100},
+	"sourceSize": {"w":72,"h":102}
+},
+"koala_walk01.png":
+{
+	"frame": {"x":146,"y":1,"w":68,"h":100},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":1,"w":68,"h":100},
+	"sourceSize": {"w":72,"h":102}
+},
+"koala_walk02.png":
+{
+	"frame": {"x":285,"y":1,"w":61,"h":100},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":1,"w":61,"h":100},
+	"sourceSize": {"w":72,"h":102}
+},
+"koala_walk03.png":
+{
+	"frame": {"x":74,"y":1,"w":70,"h":100},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":1,"w":70,"h":100},
+	"sourceSize": {"w":72,"h":102}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "koala.png",
+	"format": "RGBA8888",
+	"size": {"w":347,"h":102},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:ef39c5107b8ef9d7eff4af4cece85179:185ffcdbd5fcdb2248366f64af22b0a8:7fb9efb06c1d914765da1b924c27a2b1$"
+}
+}
