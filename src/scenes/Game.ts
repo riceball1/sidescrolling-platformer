@@ -1,8 +1,19 @@
 import Phaser from "phaser";
 
 export default class Game extends Phaser.Scene {
+  
+  // the exclamation mark marks the cursors as not undefined
+  private cursors!: Phaser.Types.Input.Keyboard.CursorKeys
+
+  private koala!: Phaser.Physics.Matter.Sprite
+  
+  
   constructor() {
     super("game");
+  }
+
+  init() {
+    this.cursors = this.input.keyboard.createCursorKeys()
   }
 
   preload() {
@@ -31,16 +42,32 @@ export default class Game extends Phaser.Scene {
 
   */
     ground.setCollisionByProperty({ collides: true });
-    console.log(ground);
+ 
     // makes the ground tiles to be static matter components
     this.matter.world.convertTilemapLayer(ground);
 
-    this.matter.add.sprite(width * 0.5, height * 0.5, "koala").play('player-walk');
+    this.koala = this.matter.add.sprite(width * 0.5, height * 0.5, "koala").play('player-idle');
 
     this.cameras.main.scrollY = 200;
     this.cameras.main.scrollX = 200;
   }
 
+  // Performs updates over time
+  update() {
+    const speed = 10;
+    if (this.cursors.left.isDown) {
+      this.koala.setVelocityX(-speed)
+    } else if (this.cursors.right.isDown) {
+      this.koala.setVelocityX(speed)
+    } else if (this.cursors.up.isDown) {
+      this.koala.setVelocityY(speed)
+    } else if (this.cursors.down.isDown) {
+      this.koala.setVelocityY(-speed)
+    }  else {
+      this.koala.setVelocityX(0)
+    }
+
+  }
 
   private createPlayerAnimations() {
     this.anims.create({
